@@ -1,0 +1,174 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700
+
+## Icons
+
+We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Manrope', sans-serif;
+	background-color: #ecf2f8;
+}
+.main {
+	display: flex;
+	justify-content: center;
+}
+.section {
+	width: 60rem;
+	margin-top: 18rem;
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	box-shadow: 0 0.5rem 3rem rgba(72, 85, 106, 0.171);
+}
+.draw {
+	width: 100%;
+	height: 100%;
+}
+.box-img {
+	border-top-left-radius: 0.8rem;
+	border-bottom-left-radius: 0.8rem;
+	overflow: hidden;
+}
+.box-text {
+	border-top-right-radius: 0.8rem;
+	border-bottom-right-radius: 0.8rem;
+	background-color: #fff;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 2.4rem;
+	gap: 1.2rem;
+}
+.title {
+	color: #48556a;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+.text {
+	color: #9eafc2;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 0.075px;
+}
+.box-author {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+}
+.img-author {
+	width: 4.8rem;
+	height: 4.8rem;
+	border-radius: 1000rem;
+}
+.btn {
+	margin-left: auto;
+	position: relative;
+	background-color: #ecf2f8;
+	padding: 1.2rem;
+	border-radius: 10000rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.6s;
+}
+.author {
+	color: #48556a;
+	font-weight: 700;
+}
+.date {
+	color: #9eafc2;
+	font-weight: 400;
+}
+.box-socials {
+	position: absolute;
+	top: 0;
+	transform: translate(-50%, -150%);
+	background-color: #48556a;
+	padding: 1.2rem 2.4rem;
+	border-radius: 0.8rem;
+	cursor: default;
+	visibility: hidden;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 1.6s;
+}
+.box-socials:hover {
+	background-color: #48556a;
+}
+.btn:hover {
+	background-color: #48556a;
+}
+.btn-active {
+	background-color: #48556a;
+}
+.box-socials-active {
+	visibility: visible;
+	pointer-events: all;
+	opacity: 1;
+}
+.socials {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+}
+.socials-text {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #9eafc2;
+	font-size: 1.2rem;
+}
+@media (max-width: 41em) {
+	.section {
+		grid-template-columns: 1fr;
+		margin-top: 4.8rem;
+		width: 90%;
+	}
+	.box-socials {
+		bottom: 0;
+		right: 0;
+		transform: scale(110%) translate(-25%, 5%);
+		padding: 0;
+	}
+	.socials {
+		/* margin: 2.2rem 3.2rem; */
+		margin: 1.2rem 2.4rem;
+	}
+}

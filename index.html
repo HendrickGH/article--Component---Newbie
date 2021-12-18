@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Article preview component</title>
+	</head>
+	<body>
+		<main class="main">
+			<section class="section">
+				<figure class="box-img">
+					<img
+						src="images/drawers.jpg"
+						alt="Get the best rooms to the best price"
+						class="draw"
+					/>
+				</figure>
+				<div class="box-text">
+					<div class="container">
+						<h1 class="title">
+							Shift the overall look and feel by adding these wonderful touches
+							to furniture in your home
+						</h1>
+						<p class="text">
+							Ever been in a room and felt like something was missing? Perhaps
+							it felt slightly bare and uninviting. I’ve got some simple tips to
+							help you make any room feel complete.
+						</p>
+						<figure class="box-author">
+							<img
+								src="images/avatar-michelle.jpg"
+								alt="Michelle Appleton"
+								class="img-author"
+							/>
+							<div class="author-data">
+								<p class="author">Michelle Appleton</p>
+								<p class="date">28 Jun 2020</p>
+							</div>
+							<button class="btn">
+								<img
+									src="images/icon-share.svg"
+									alt="Share with your friends"
+									class="btn-share"
+								/>
+								<div class="box-socials">
+									<div class="socials">
+										<p class="socials-text">Share</p>
+										<a href="#" class="social">
+											<img
+												src="images/icon-facebook.svg"
+												alt="Facebook"
+												class="socials-img"
+											/>
+										</a>
+										<a href="#" class="social">
+											<img
+												src="images/icon-twitter.svg"
+												alt="Twitter"
+												class="socials-img"
+											/>
+										</a>
+										<a href="#" class="social">
+											<img
+												src="images/icon-pinterest.svg"
+												alt="Pinterest"
+												class="social-img"
+											/>
+										</a>
+									</div>
+								</div>
+							</button>
+						</figure>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script>
+			const btn = document.querySelector('.btn');
+			btn.addEventListener('click', () => {
+				btn.classList.toggle('btn-active');
+				btn.lastElementChild.classList.toggle('box-socials-active');
+			});
+		</script>
+	</body>
+</html>
